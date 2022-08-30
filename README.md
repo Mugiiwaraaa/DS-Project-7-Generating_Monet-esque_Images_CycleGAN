@@ -53,13 +53,12 @@ Instead of a standard GAN setup , we have two  discriminators and generators. <b
 ### Model Architecture ###
 
 The generator has four sections :
-
 - An Encoder that takes image as input and has three convolution layers all with a stride of two.
 - A Transformer wich is a series of six residual blocks
 - A Decoder which uses two transpose convolutions to enlarge the representation size
 - One output layer to produce the final image in RGB
 
-The discriminator it can be pretty simple, 
+The discriminator is pretty simple, 
 - It has four convolution layers all with a stride of two
 - The output is a patchGAN, because we're not going to output a single scaler between 0 and 1, but what we are going to output is a grid of values, each of those values are going to be between 0 and 1. <br>
 It is called a patchGan because each of those values corresponds to seeing a patch in the original image.(similar to filters in CNNs)
