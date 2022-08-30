@@ -6,7 +6,7 @@ Designed a model that implements the CycleGAN architecture to convert pictures t
 * Model - The major aim in this project is to convert the test photots to have the Monet effect.  
 ## Code and Resources Used ##
 **Python Version:** 3.10.5 <br />
-**Packages:**  numpy, sklearn, matplotlib, PIL,tensorflow,tensorflow_hub,keras streamlit,webbrowser <br />
+**Packages:**  numpy, pandas, matplotlib, PIL, tensorflow, keras, re, os, kaggle_datasets <br />
 **For Web Framework Requirements:** _pip install -r requirements.txt_ <br />
 **Data Resources:** <https://www.kaggle.com/competitions/dogs-vs-cats/data> <br />
 **Pre-Trained Model:** MobileNet_model <https://tfhub.dev/google/tf2-preview/mobilenet_v2/feature_vector/4>
