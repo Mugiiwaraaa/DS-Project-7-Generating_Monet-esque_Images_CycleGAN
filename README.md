@@ -16,18 +16,22 @@ The **challenge** is to create museum worthy art from deep learning algorithms. 
 
 The dataset contains 300 Monet paintings and 7028 test photos in the jpeg and TFRecord format.<br>
 TFRecord is a simple format for storing a sequence of binary records.This is more efficient and saves a lot of space.
-![](Monet_Paintings.png "Monet Paintings")
-![](Test_Photos.png "Test Photos")
+
+![](Monet_Paintings.PNG "Monet Paintings")
+![](Test_Photos.PNG "Test Photos")
 
 
-## Prepocessing the images for the model ## 
-1. These images are not in same shape and since our pre=trained model requires a specific shape. We manipulate and resize all images in the required size which is (224,224,3).
-2. Separating the cats and dogs in different files so that we can pick equal amounts of pictures to train our model.
-3. Since we are using a pre-trained model with pre-trained weights, we dont have to use all the images in our dataset to train our model.I just use 2000 pictures of both cats and dogs for my model.
-4. Creating labels for resized images of dogs and cats where cats are represented by 1 and dogs are represented by 0.
-5. Converting all resized images to NumPy arrays as our model only takes numpy array as input.
-6. Splitting the dataset into training and testing sets using the sklearn library.
-7. Feature Scaling- Dividing all values by 255 because the that is my maximum intensity of colors
+
+## Data Augmentation ## 
+It is a technique to increase the diversity of the training set by applying random (but realistic) transformations, such as image rotation, and it can be done very easily using the API tf.image. <br>
+To learn more about it check out the official decantation: <https://www.tensorflow.org/tutorials/images/data_augmentation>. <br>
+
+[Note:You can make changes here according to your preferences as long as it is realistic.]
+
+![](Aug_Monet.PNG "Augmented Monet Paintings")
+
+
+![](Aug_Test.PNG "Augmented Test Photos")
 
 ## Model Building ##
 1. Uploading the mobilenet model from the url given above from the tensorflow-hub library 
