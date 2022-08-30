@@ -83,6 +83,7 @@ Due to my poor computational power , I have set my number of Epochs to just 20. 
 
 The Ideal results should be when the discriminator losses are close to 0.5 (i.e when it fails to identify between a real or fake image) and the generator losses should be as low as possible.
 I have found a visualization of all the loss function on kaggle.
+
 ![](Lossfn.PNG "Visualization of Loss  Functions")
 
 #### Results ####
