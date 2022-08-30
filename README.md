@@ -3,17 +3,22 @@ Designed a model that implements the CycleGAN architecture to convert pictures t
 
 * Built an image generator model that produces Monet'esque images. The model uses the CycleGAN algorithm to generate any image with a touch of Monet's skills.
 * Dataset - Part of a Kaggle Competition. The dataset contains 300 Monet paintings and 7028 test photos on which we will apply the Monet effect.
-* Model - The major aim in this project is to convert the test photots to have the Monet effect.  
+* Model - The major aim in this project is to convert the test photos to have the Monet effect.  
 ## Code and Resources Used ##
 **Python Version:** 3.10.5 <br />
 **Packages:**  numpy, pandas, matplotlib, PIL, tensorflow, keras, re, os, kaggle_datasets <br />
 **For Web Framework Requirements:** _pip install -r requirements.txt_ <br />
-**Data Resources:** <https://www.kaggle.com/competitions/dogs-vs-cats/data> <br />
-**Pre-Trained Model:** MobileNet_model <https://tfhub.dev/google/tf2-preview/mobilenet_v2/feature_vector/4>
+**Data Resources:** <https://www.kaggle.com/competitions/gan-getting-started> <br />
 
 ## About the Dataset ##
-- Dataset consists of 25,000 images of cats and dogs in the train.zip folder. We use the images in this folder to train our model. 
-- The images in the test folder will be used to evaluate the model.
+Computer vision has advanced tremendously in recent years and GANs(Generative Adversarial Networks)  are now capable of mimicking objects in a very convincing way.<br>
+The **challenge** is to create museum worthy art from deep learning algorithms. <br>
+
+The dataset contains 300 Monet paintings and 7028 test photos in the jpeg and TFRecord format.<br>
+TFRecord is a simple format for storing a sequence of binary records.This is more efficient and saves a lot of space.
+![](Monet_Paintings.png "Monet Paintings")
+![](Test_Photos.png "Test Photos")
+
 
 ## Prepocessing the images for the model ## 
 1. These images are not in same shape and since our pre=trained model requires a specific shape. We manipulate and resize all images in the required size which is (224,224,3).
